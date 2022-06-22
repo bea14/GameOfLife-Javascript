@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formes>
+    <forme> 
+        <name>Le chromosome</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>13</width>
+        <height>5</height>
+        <pattern>0000000000000\n0111110111110\n0000001000000\n0111110111110\n0000000000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Planeur (vers le sud-est)</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>5</width>
+        <height>5</height>
+        <pattern>00000\n01010\n00110\n00100\n00000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Le clignotant</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>5</width>
+        <height>3</height>
+        <pattern>00000\n01110\n00000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Un rectangle 4x1</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>6</width>
+        <height>3</height>
+        <pattern>000000\n011110\n000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>La ruche</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>6</width>
+        <height>5</height>
+        <pattern>000000\n001100\n010010\n001100\n000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Un rectangle 5x1</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>7</width>
+        <height>3</height>
+        <pattern>0000000\n0111110\n0000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Un bloc</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>4</width>
+        <height>4</height>
+        <pattern>0000\n0110\n0110\n0000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Le bateau</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>5</width>
+        <height>5</height>
+        <pattern>00000\n00110\n01010\n00100\n00000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Le pain</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>6</width>
+        <height>6</height>
+        <pattern>000000\n000100\n001010\n010010\n001100\n000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>La mare</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>6</width>
+        <height>6</height>
+        <pattern>000000\n001100\n010010\n010010\n001100\n000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>La balise</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>6</width>
+        <height>6</height>
+        <pattern>000000\n000110\n000110\n011000\n011000\n000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Le crapeau</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>6</width>
+        <height>4</height>
+        <pattern>000000\n011100\n001110\n000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>La ruche évoluée</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>5</width>
+        <height>6</height>
+        <pattern>00000\n00110\n01010\n01010\n00100\n00000</pattern>
+    </forme>
+
+    <forme> 
+        <name>L'escalier</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>6</width>
+        <height>5</height>
+        <pattern>000000\n000110\n001100\n011000\n000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Pentamino</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>5</width>
+        <height>5</height>
+        <pattern>00000\n00110\n01100\n00100\n00000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Cthulhu</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>13</width>
+        <height>15</height>
+        <pattern>0000000000000\n0010001000100\n0101010101010\n0101010101010\n0011010101100\n0000010100000\n0000010100000\n0000110110000\n0001000010000\n0001101100000\n0000101000000\n0001001000000\n0001010000000\n0011011000000\n0000000000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Le pulsar</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>7</width>
+        <height>7</height>
+        <pattern>0000000\n0101010\n0100010\n0100010\n0100010\n0101010\n0000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Le penta-décathlon</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>12</width>
+        <height>3</height>
+        <pattern>000000000000\n011111111110\n000000000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Grand vaisseau spatial</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>9</width>
+        <height>7</height>
+        <pattern>000000000\n001111110\n010000010\n000000010\n010000100\n000110000\n000000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Vaisseau spatial moyen</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>8</width>
+        <height>7</height>
+        <pattern>00000000\n00111110\n01000010\n00000010\n01000100\n00010000\n00000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Petit vaisseau spatial</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>7</width>
+        <height>6</height>
+        <pattern>0000000\n0011110\n0100010\n0000010\n0100100\n0000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>L'oie du Canada</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>14</width>
+        <height>15</height>
+        <pattern>00000000000000\n00000000000100\n00000000000110\n01100000001010\n00101100000000\n00001100110000\n00001100110000\n00000001100000\n00010111100000\n00101101010000\n00000000011000\n00011100101000\n00000000000100\n00000000011000\n00000000000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>60P5H2V0</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>13</width>
+        <height>21</height>
+        <pattern>0000000000000\n0110011000000\n0000001100000\n0001101000000\n0001000000100\n0000000000100\n0000100000010\n0000010101100\n0101000001100\n0111111110000\n0000000000000\n0111111110000\n0101000001100\n0000010101100\n0000100000010\n0000000000100\n0001000000100\n0001101000000\n0000001100000\n0110011000000\n0000000000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Le canon à planeur</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>38</width>
+        <height>11</height>
+        <pattern>00000000000000000000000000000000000000\n00000000000001100000000000000000000000\n00000000000010001000000000000000000000\n00000000000100000100000001000000000000\n01100000000100010110000101000000000000\n01100000000100000100011000000000000000\n00000000000010001000011000000000000110\n00000000000001100000011000000000000110\n00000000000000000000000101000000000000\n00000000000000000000000001000000000000\n00000000000000000000000000000000000000</pattern>
+    </forme>
+
+    <forme> 
+        <name>Le fumeur</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>9</width>
+        <height>28</height>
+        <pattern>000000000\n000000100\n000000010\n010000010\n001111110\n000000000\n000000000\n011100000\n011000000\n000001000\n000001100\n000000110\n000001100\n000000000\n000000000\n000000000\n000001100\n000000110\n000001100\n000001000\n011000000\n011100000\n000000000\n000000000\n001111110\n010000010\n000000010\n000000100\n000000000</pattern>
+    
+    </forme>
+
+    <forme> 
+        <name>Petite structure à croissance infinie</name>
+        <image>"/formes/img/Lechromosome.jpg"</image>
+        <width>10</width>
+        <height>8</height>
+        <pattern>0000000000\n0101000000\n0001000000\n0000010000\n0000010100\n0000010110\n0000000100\n0000000000</pattern>
+    </forme>
+
+</formes>
