@@ -8,12 +8,19 @@ let iterationsOutput = document.getElementById("iterations"),
     gridHeight;
 
 let c = document.getElementById('grille'),
-    ctx = c.getContext('2d'),
-    canvas = document.getElementsByTagName('canvas');
+    ctx = c.getContext('2d');
 
 let parentContainer = document.getElementById("data-container"),
     formsList;
 let file = "formes/formes.xml";
+
+/**
+* Récupération des variables entrées par l'utilisateur
+*/
+let fillingRateTag = document.getElementById("taux_remplissage"),
+inputHeight = document.getElementById("hauteur_grille"),
+inputWidth = document.getElementById("largeur_grille");
+
 
 let lifeRules, deathRules,
 delay = 1000,
@@ -48,7 +55,7 @@ function randomFill(gridWidth, gridHeight, fillingRate){
 }
 
 /**
- * dessin de la grille avec les cellules
+ * dessin de la grille vide
 */
  function drawGrid(context2D,generation){
     let height = generation.length;
@@ -56,7 +63,7 @@ function randomFill(gridWidth, gridHeight, fillingRate){
     c.width = width * cellSize; // in pixels
     c.height = height * cellSize; // in pixels
     //context2D.beginPath();
-    clearGrid(context2D, canvas.width, canvas.height);
+    clearGrid();
     context2D.lineWidth = "0.2";
     context2D.fillStyle = 'white';
     for(let x = 0; x < height; x++) {
@@ -85,6 +92,40 @@ function drawCells(context2D,generation){
             }
         }
     }
+}
+
+/**
+ * Modification des paramètres par l'utilisateur
+*/
+function checkInputValue(element, outputElement){
+    const value = parseInt(element.value);
+    if(value < element.min){
+        outputElement.value = element.min;
+    } else if(value > element.max) {
+        element.value = element.max;
+    }
+    outputElement.value = element.value; 
+}
+
+function randomFillUser(){
+    gridWidth =  inputHeight.value;
+    gridHeight = inputWidth.value;
+    if(gridWidth % cellSize != 0 || gridHeight % cellSize != 0){
+        gridWidth = Math.floor(gridWidth / cellSize) * cellSize;
+        gridHeight = Math.floor(gridHeight / cellSize)  * cellSize;
+        //gridWidth -= gridWidth % cellSize;
+        //gridHeight -= gridHeight % cellSize;
+    } else {
+        gridWidth = gridWidth;
+        gridHeight = gridHeight;
+    }
+    userFill(gridWidth, gridHeight);
+}
+
+function userFill(width, height){
+    let generationUser = randomFill(width,height, fillingRateTag.value);
+    drawGrid(ctx,generationUser);
+    drawCells(ctx,generationUser);
 }
 
 /**
@@ -191,8 +232,7 @@ function modelFill(name){
     y = 0;
     for (let element of patternLines) {
         for(let c of element){
-            s = parseInt(c);            
-            console.log('s',s)       
+            s = parseInt(c);      
             if (s == 1){
                 generationModel[x][y] = 1;
                 nb++;
@@ -205,28 +245,30 @@ function modelFill(name){
                 if(x >= height) break;
             }
         }
-    }       
+    }
+    //Trace de la Grille
+   drawGrid(ctx,generationModel);
+   drawCells(ctx,generationModel);
    //Initialisation du nb d'iterations et du nombre de cellules vivantes
    nbIterations = 0;
    nbAliveCells = nb;
   // Affichage du nb de cellules vivantes et du nb d'iterations
    document.getElementById("iterations").innerHTML = nbIterations;
    document.getElementById("alive").innerHTML = nbAliveCells;
-   drawGrid(ctx,generationModel);
-   drawCells(ctx,generationModel);
+   
 }
 
 /**
  * Efface le contenu de la grille
  */
- function clearGrid(context2D, width, height){
+ function clearGrid(){
     if(gridMode) gridMode = false;
     nbIterations = 0;
     nbAliveCells = 0;
     cellsParIteration = [];
-    context2D.fillStyle = 'black';
-    context2D.fillRect(0, 0, width, height);
-    context2D.clearRect(0, 0, width * cellSize, height * cellSize);    
+    ctx.fillStyle = 'transparent';
+    ctx.fillRect(0, 0, 1000, 1000);
+    ctx.clearRect(0, 0, 1000, 1000);  
     document.getElementById("iterations").innerHTML = '';
     document.getElementById("alive").innerHTML = '';
 }
