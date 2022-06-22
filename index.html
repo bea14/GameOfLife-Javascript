@@ -51,7 +51,7 @@
                 <label for="mode_grille">Grille fermée (côtés ne se rejoignent pas) :</label>
                 <input type="checkbox" id="mode_grille" onchange="gridMode=this.checked;"><br>
 
-                <button title="Remplissage aléatoire" onclick="randomFill();">Remplissage aléatoire
+                <button title="Remplissage aléatoire" onclick="randomFillUser();">Remplissage aléatoire
                 </button>
                 <button title="Effacer la grille" onclick="clearGrid()">Effacer la grille
                 </button>
@@ -66,7 +66,7 @@
         <div id="game-container">
             <div class="graph">
             </div>
-            <canvas id="grille" height="760" width="560" >
+            <canvas id="grille" height="1000" width="1000" >
                 Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
             </canvas>
             <div id="controls">
@@ -75,7 +75,7 @@
                 <button title="Pause" onclick="pause();"> Pause
                 </button>
                 <button title="PasAPas" onclick="stepByStep();"> Pas à pas
-                </button>        
+                </button>
             </div>
         </div>        
     </div>
