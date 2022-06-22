@@ -5,19 +5,15 @@ body {
 .title {
     background-color: #212121;
     color: #FFFFFF;
-    padding: 10px 0;
     text-align: center;
-
-    border-radius:10px 10px 0 0;
-    -moz-border-radius:10px 10px 0 0;
-    -webkit-border-radius:10px 10px 0 0;
+    border-radius:1rem 1rem 0 0;
 }
 
 h1 {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 10px;
-    margin-top: 15px;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
 footer {
@@ -30,8 +26,8 @@ footer {
     display: grid;
     /*grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);*/
-  grid-gap: 0px;
-  padding: 20px;
+    grid-gap: 0px;
+     padding: 20px;
     margin-top: 10px;
 }
 
@@ -39,16 +35,6 @@ footer {
     outline: black 2px solid;
     margin: auto;
 }
-
-.gameGrid {
-    height: 20px;
-    width: 20px;
-    border-radius: 3px;
-    border: 1px solid #c4c4c4;
-    /*background-color: #FFFFF0;*/
-    /*font-size: 2rem;*/
-    color: #333;
-   }
 
 input[type="number"] {
     width: 50px;
@@ -64,12 +50,12 @@ input[type=number]::-webkit-inner-spin-button {
     float: left;
     font-size: 14px;
     font-weight: bold;
-    height: 730px;
+    height: 100vh;
     /*line-height: 530px;*/
-    margin: 20px;
+    margin: 0.5rem;
     position: relative;
     text-align: center;
-    width: 500px;
+    width: 45vw;
 }
 
 
@@ -78,10 +64,10 @@ input[type=number]::-webkit-inner-spin-button {
     border: 1px solid #DDDDDD;
     float: left;
     font-weight: bold;
-    height: 730px;
-    margin: 20px;
+    height: 100vh;
+    margin: 0.5rem;
     position: relative;
-    width: 560px;
+    width: 45vw;
 }
 
 #game-container > div {
@@ -100,11 +86,6 @@ input[type=number]::-webkit-inner-spin-button {
 #specific_forms {
     margin-bottom: 10px;
     text-align: center;
-}
-
-#grille {
-    outline: black 2px solid;
-    margin: auto;
 }
 
 fieldset {
@@ -136,71 +117,3 @@ fieldset {
     outline: none;
     margin: 0 10px;
 }
-
-/* Liste des formes spécifiques qui s'affiche au dessus de la page */
-
-.modal {
-    display: none;
-    position: fixed; 
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%; 
-    background-color: rgba(0,0,0,0.4); /* Couleur de fond du reste de la page */
-    font-family: Arial, Helvetica, sans-serif;
-}
-  
-#forms_content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    max-width: 60em;
-    max-height: 70vh;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
-    animation-duration: 0.3s;
-    overflow: auto;
-}
-  
-#close_list {
-    position: absolute;
-    top: 5px;
-    right: 35px;
-    color: rgb(61, 61, 61);
-    font-size: 60px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-  
-#close_list:hover,
-#close_list:focus {
-    color: #993838;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#forms_table {
-    border-collapse: collapse;
-    width: 100%;
-    border: 2px solid rgb(200, 200, 200);
-}
-
-#forms_table thead {
-    background-color: #2d88af;
-    color: #fff;
-    font-size: 1.1rem;
-}
-
-#forms_table td, #forms_table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#forms_table tbody tr:nth-child(even){background-color: #f2f2f2;}
-
-#forms_table tbody tr:hover {background-color: #ddd;}
-
