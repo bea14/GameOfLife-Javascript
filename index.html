@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>BMB - Game Of Life</title>
-  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"> </script>
 </head>
@@ -20,8 +20,19 @@
                 <label for="temps_iteration">Temps par itération :</label> <br>
                 <output id="temps_iteration">1 seconde</output> <br>
             </fieldset>
+            <fieldset id="aleatoire">
+                <legend>Mode aléatoire</legend>
+                <p>Dans ce mode, une grille alétoire est tracée suivant les paramètres ci-dessous, vous n'avez plus qu'à lancer le jeu !</p>
+                <label for="defaultGridWidth">Hauteur grille : </label>
+                <output id="defaultGridWidth">100 px (5 cellules)</output> <br>
+                <label for="defaultGridHeight">Largeur grille :</label>
+                <output id="defaultGridHeight">100 px (5 cellules)</output> <br>
+                <label for="defaultFillingRate">Taux de remplissage max :</label>
+                <output id="defaultFillingRate">30%</output> <br>
+            </fieldset>
             <fieldset id="parametres">
-                <legend>Paramètres</legend>                
+                <legend>Paramètres</legend>
+                <p>Dans ce mode, vous choississez vous-même les paramètres de la grille, vous cliquez sur remplissage aléatoire et vous n'avez plus qu'à lancer le jeu !</p>                
                 <label for="hauteur_grille">Hauteur de la grille :</label> <br>
                 <input type="range" id="hauteur_grille" value="100" min="100" max="1000" oninput="hauteur_output.value = this.value">
                 <input id="hauteur_output" type="number" min="100" max="1000" value="100" oninput="checkInputValue(this, hauteur_grille);"> <br>
@@ -30,7 +41,7 @@
                 <input type="range" id="largeur_grille" value="100" min="100" max="1000" oninput="largeur_output.value = this.value">
                 <input id="largeur_output" type="number" min="100" max="1000" value="100" oninput="checkInputValue(this, largeur_grille);"> <br>
 
-                <label for="taux_remplissage">Taux de remplissage (uniquement en mode aléatoire):</label> <br>
+                <label for="taux_remplissage">Taux de remplissage max :</label> <br>
                 <input type="range" id="taux_remplissage" value="30" min="0" max="100" oninput="taux_remplissage_output.value = this.value">
                 <input id="taux_remplissage_output" type="number" value="30" min="0" max="100" oninput="checkInputValue(this, taux_remplissage);"> % <br>
 
@@ -38,7 +49,7 @@
                 <input type="checkbox" id="display_stats" onchange="toggleGraph(this.checked);"><br>
 
                 <label for="mode_grille">Grille fermée (côtés ne se rejoignent pas) :</label>
-                <input type="checkbox" id="mode_grille" onchange="gridMode=this.checked;">
+                <input type="checkbox" id="mode_grille" onchange="gridMode=this.checked;"><br>
 
                 <button title="Remplissage aléatoire" onclick="randomFill();">Remplissage aléatoire
                 </button>
@@ -46,20 +57,26 @@
                 </button>
             </fieldset>
             <fieldset id="specific_forms_parent">
-                <legend>Formes spécifiques</legend>
+                <legend>Formes spécifiques</legend>                
+                <p>Dans ce mode, vous pouvez choisir une forme "modèle" dont l'évolution est connue et vous n'avez plus qu'à lancer le jeu !</p>
                 <form id="specific_forms"></form>
             </fieldset>
-            <div id="controls">
-                <button title="Démarrer/Arrêter" onclick="playPause();"> Démarrer
-                </button>           
-            </div>
+            
         </div>
         <div id="game-container">
             <div class="graph">
             </div>
-            <canvas id="grille">
+            <canvas id="grille" height="760" width="560" >
                 Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
             </canvas>
+            <div id="controls">
+                <button title="Demarrer/Arreter" onclick="playStop();"> Démarrer
+                </button>
+                <button title="Pause" onclick="pause();"> Pause
+                </button>
+                <button title="PasAPas" onclick="stepByStep();"> Pas à pas
+                </button>        
+            </div>
         </div>        
     </div>
 
